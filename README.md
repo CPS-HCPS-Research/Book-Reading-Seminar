@@ -48,6 +48,8 @@ Start with the [contribution guide](CONTRIBUTING.md), then use the [Issue templa
 
 **中文参与指引：** 先查看整体安排与教材计划，认领章节后创建分支。笔记、PPT、Demo和习题分别放入教材目录；保留PPT可编辑源文件，建议附同名PDF。通过PR提交并说明验证状态、引用来源和待讨论问题。研讨结束后再新增真实日期的记录；负责人和时间未确认时写“待指定／待定”。
 
+完整操作步骤见[中文使用说明](docs/user-guide.md)，包括首次提交PPT和Demo、PR协作、会后记录及新增教材。正文可以使用中文，文件和文件夹名使用英文。
+
 Run the lightweight checks from the repository root (Python 3.9+):
 
 ```sh
