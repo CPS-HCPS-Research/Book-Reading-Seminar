@@ -19,6 +19,37 @@
 
 官方依据：[GitHub分支保护配置](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)。组织策略和界面可能变化，按当前可用选项操作。
 
+## 初始化交付与恢复发布（2026-10-26）
+
+本地已完成27个文本文件，初始提交为`a0bb08d40cbc0300ea44ae0a6eff373db8c35b8d`；本节在后续说明提交中追加。目录、相对链接、模板检查通过；检查器的11项测试通过。没有教材/课件副本、学生汇报文件、已运行Demo或虚构研讨记录。验证仅覆盖本地仓库结构与检查器行为，未运行GitHub Actions或KeYmaera X。
+
+本次发布受阻的实际结果：
+
+- HTTPS克隆、查询及推送：连接`github.com:443`超时。
+- SSH推送：`Permission denied (publickey)`。
+- GitHub连接器创建README：403 `Resource not accessible by integration`，没有成功写入远程。
+- 本机执行环境拒绝写入`.git/config`，所以未能保存`origin`；提交成功不表示已建立远程跟踪。
+- 分支保护读取：同样返回集成权限403；未修改保护规则。
+
+有正常网络和仓库写权限的维护者可在自己的终端中恢复发布。先检查当前状态和远程，**仅当origin不存在时**执行`remote add`：
+
+```sh
+git status --short --branch
+git remote -v
+git remote add origin https://github.com/CPS-HCPS-Research/Book-Reading-Seminar.git
+git ls-remote --heads origin
+```
+
+如果远程仍无分支，执行普通推送：
+
+```sh
+git push -u origin main
+```
+
+如果远程已经新增提交，先抓取并审阅双方历史，保留本地成果，再决定普通合并或PR迁移；不要强推或重建仓库。认证应通过维护者自己的GitHub凭据管理或已授权SSH密钥完成，不把凭据写入文件、URL或Issue。
+
+推送成功后，打开仓库首页确认27个文件可见，检查Actions中的`repository-check`结果，再执行上面的分支保护设置。该确认步骤尚未完成，不应把本地测试结果报告为远程CI通过。
+
 ## 轻量检查的维护
 
 日常运行：
