@@ -1,0 +1,48 @@
+# Operating system / editor temporary files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+~$*
+.idea/
+.vscode/
+
+# Local environments, dependencies and build output
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.pytest_cache/
+.mypy_cache/
+.cache/
+build/
+dist/
+target/
+*.class
+*.o
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.log
+*.tmp
+tmp/
+temp/
+
+# Secrets and local-only resources
+.env
+.env.*
+!.env.example
+*.key
+!books/*/slides/*.key
+!books/*/slides/**/*.key
+*.pem
+credentials.json
+secrets.json
+local-resources/
+data-private/
+
+# Editable slides, intentional PDF exports, source models and small evidence
+# files are NOT ignored. Check rights and size before adding them.

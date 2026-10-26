@@ -1,0 +1,12 @@
+# LFCPS Presentations / 汇报材料
+
+当前暂无学生PPT。本目录仅建立归档规则，不预制虚构汇报。
+
+文件名采用 `YYYY-MM-DD-chXX-topic.pptx`，建议附同主体PDF；保留可编辑源文件，不强制转成Markdown。日期与冲突处理见[提交规范](../../../CONTRIBUTING.md)。
+
+使用[汇报模板与检查清单](../../../templates/presentation.md)安排内容。官方课件只在[资源表](../resources.md)中链接；不能因可下载就原样上传。
+
+| 日期 | 章节 / 主题 | 汇报人 | 可编辑文件 | PDF | PR / 状态 |
+| --- | --- | --- | --- | --- | --- |
+
+有实际材料后追加相对链接；返回[教材档案](../README.md)。
