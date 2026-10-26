@@ -1,4 +1,4 @@
-"""Behavior tests: mutate small temporary repositories; never run submitted Demos."""
+"""行为测试：修改临时小仓库验证检查效果，不执行提交的Demo。"""
 
 from pathlib import Path
 import subprocess
@@ -64,12 +64,12 @@ class RepositoryChecks(unittest.TestCase):
         self.write('books/TEST/slides/2026-02-30-ch01-intro.pptx', 'fixture')
         self.write('sessions/2026-02-30.md', '# Not a valid date')
         result = '\n'.join(self.errors())
-        for expected in ('notes.md', 'invalid slide filename', 'session record'):
+        for expected in ('notes.md', '汇报文件名', '研讨记录路径'):
             self.assertIn(expected, result)
 
     def test_pdf_requires_editable_source(self):
         self.write('books/TEST/slides/2026-10-26-ch01-intro.pdf', 'fixture')
-        self.assertTrue(any('editable source' in e for e in self.errors()))
+        self.assertTrue(any('可编辑源文件' in e for e in self.errors()))
         self.write('books/TEST/slides/2026-10-26-ch01-intro.pptx', 'fixture')
         self.assertEqual([], self.errors())
 
@@ -78,8 +78,8 @@ class RepositoryChecks(unittest.TestCase):
         secret = 'gh' + 'p_' + 'a' * 36
         self.write('books/TEST/demos/ch02-flow/README.md', secret)
         result = '\n'.join(self.errors())
-        self.assertIn('sensitive filename', result)
-        self.assertIn('possible credential', result)
+        self.assertIn('文件名涉及敏感信息', result)
+        self.assertIn('疑似敏感凭据', result)
         self.assertNotIn(secret, result)
 
     def test_large_file_and_cache(self):
@@ -89,20 +89,20 @@ class RepositoryChecks(unittest.TestCase):
             output.truncate(26 * 1024 * 1024)
         result = '\n'.join(self.errors())
         self.assertIn('25 MiB', result)
-        self.assertIn('cache', result)
+        self.assertIn('缓存', result)
 
     def test_template_placeholders_only_in_templates(self):
         self.write('templates/notes.md', '# {{title}}')
         self.assertEqual([], self.errors())
         self.write('books/TEST/notes/ch01-topic-person.md', '# {{title}}')
-        self.assertTrue(any('unfilled template' in e for e in self.errors()))
+        self.assertTrue(any('未填写的模板占位符' in e for e in self.errors()))
 
     def test_links_cannot_escape_and_symlinks_are_not_read(self):
         self.write('README.md', '[outside](../../outside.md)')
         (self.root / 'outside-link').symlink_to(self.root.parent)
         result = '\n'.join(self.errors())
-        self.assertIn('escapes repository', result)
-        self.assertIn('symlinks are not supported', result)
+        self.assertIn('指向仓库之外', result)
+        self.assertIn('不支持符号链接', result)
 
     def test_git_ignored_files_excluded_but_tracked_secrets_detected(self):
         subprocess.run(['git', 'init', '-q', str(self.root)], check=True)
@@ -111,7 +111,7 @@ class RepositoryChecks(unittest.TestCase):
         self.write('cache.tmp', 'fixture')
         self.assertEqual([], self.errors(all_files=False))
         subprocess.run(['git', '-C', str(self.root), 'add', '-f', '.env'], check=True)
-        self.assertTrue(any('sensitive filename' in e for e in self.errors(all_files=False)))
+        self.assertTrue(any('文件名涉及敏感信息' in e for e in self.errors(all_files=False)))
 
 
 if __name__ == '__main__':

@@ -1,4 +1,4 @@
-# LFCPS Presentations / 汇报材料
+# LFCPS汇报材料
 
 当前暂无学生PPT。本目录仅建立归档规则，不预制虚构汇报。
 

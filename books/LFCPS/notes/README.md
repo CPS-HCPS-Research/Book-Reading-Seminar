@@ -1,4 +1,4 @@
-# LFCPS Notes / 阅读笔记
+# LFCPS阅读笔记
 
 保存原创解释、推导、问题和错误分析，采用 `chXX-topic-author.md`。使用[笔记模板](../../../templates/notes.md)，在有需要时创建 `chXX/` 子目录；链接相对于文件所在位置。
 

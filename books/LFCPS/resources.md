@@ -1,10 +1,10 @@
-# LFCPS Official Resources / 官方资源
+# LFCPS官方资源
 
 核实日期：2026-10-26。仅登记资源入口，不在仓库镜像教材、官方课件、视频或工具发行包。
 
 ## 书目与版本
 
-André Platzer. *Logical Foundations of Cyber-Physical Systems*. Springer, Cham, 2018. First edition. DOI: [10.1007/978-3-319-63588-0](https://doi.org/10.1007/978-3-319-63588-0).
+André Platzer. *Logical Foundations of Cyber-Physical Systems*. Springer, Cham, 2018. 第1版。 DOI: [10.1007/978-3-319-63588-0](https://doi.org/10.1007/978-3-319-63588-0).
 
 [Springer书目](https://link.springer.com/book/10.1007/978-3-319-63588-0)登记：精装ISBN 978-3-319-63587-3（2018-08-11）；电子书ISBN 978-3-319-63588-0（2018-07-30）；平装ISBN 978-3-030-09697-7（2019-02-08），版次为1。研读基准为2018年英文第1版，不把2019年平装发行日期写成新版年份。
 

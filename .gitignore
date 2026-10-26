@@ -1,4 +1,4 @@
-# Operating system / editor temporary files
+# 操作系统与编辑器临时文件
 .DS_Store
 Thumbs.db
 *.swp
@@ -8,7 +8,7 @@ Thumbs.db
 .idea/
 .vscode/
 
-# Local environments, dependencies and build output
+# 本地环境、依赖和构建产物
 __pycache__/
 *.py[cod]
 .venv/
@@ -31,7 +31,7 @@ target/
 tmp/
 temp/
 
-# Secrets and local-only resources
+# 凭据和仅供本地使用的资源
 .env
 .env.*
 !.env.example
@@ -44,5 +44,5 @@ secrets.json
 local-resources/
 data-private/
 
-# Editable slides, intentional PDF exports, source models and small evidence
-# files are NOT ignored. Check rights and size before adding them.
+# 保留可编辑汇报文件、必要的PDF展示版、模型源文件和小型证据。
+# 添加前应检查版权和文件大小。

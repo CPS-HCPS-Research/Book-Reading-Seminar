@@ -1,4 +1,4 @@
-# LFCPS Demos / 实验与验证
+# LFCPS实验与验证
 
 当前没有已实现或已验证Demo，也没有已测试的KeYmaera X环境。本目录为后续原创实验提供入口。
 

@@ -1,4 +1,4 @@
-name: Repository quality
+name: 仓库质量检查
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Check repository
+      - name: 检查仓库结构与材料
         run: python3 scripts/check_repository.py
-      - name: Test checker failure cases
+      - name: 运行检查器测试
         run: python3 -m unittest discover -s scripts/tests -v

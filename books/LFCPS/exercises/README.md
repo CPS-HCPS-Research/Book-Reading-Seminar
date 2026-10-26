@@ -1,4 +1,4 @@
-# LFCPS Exercises / 习题与原创解答
+# LFCPS习题与原创解答
 
 当前暂无已提交解答。使用 `chXX-exNN-topic-author.md`，可按需创建 `chXX/` 子目录。
 

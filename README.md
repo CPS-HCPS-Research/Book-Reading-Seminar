@@ -1,66 +1,68 @@
-# Book Reading Seminar
+# 图书研讨会
 
-**CPS-HCPS Research** · A shared reading and discussion space for textbooks, original learning materials, and reproducible demonstrations.
+**Book Reading Seminar · CPS-HCPS Research**
 
-## Purpose and Scope
+面向CPS、HCPS及相关基础理论与智能软件研究，持续积累教材研读、原创学习材料、可复现实验和研讨记录。
 
-We study Cyber-Physical Systems (CPS), Human-Cyber-Physical Systems (HCPS), their theoretical foundations, and related intelligent software research. Each book has its own archive; dated seminar records connect discussions to the materials that informed them.
+## 目标与范围
 
-This repository contains original contributions and resource links. It does not distribute restricted textbooks or teaching materials. See the [contribution and rights policy](CONTRIBUTING.md).
+读书会围绕信息物理系统（Cyber-Physical Systems，CPS）、人机物融合系统（Human-Cyber-Physical Systems，HCPS）及相关研究开展教材学习、方法推导和问题讨论。每本教材拥有独立档案，研讨记录按实际日期关联所使用的材料与后续任务。
 
-## Current Books
+仓库主要保存原创学习资料和官方资源链接。教材全文、课件及其他第三方材料的公开使用要求见[协作与版权规范](CONTRIBUTING.md)。
 
-| Book | Status | Entry points |
+## 当前教材
+
+| 教材 | 学习状态 | 常用入口 |
 | --- | --- | --- |
-| *Logical Foundations of Cyber-Physical Systems* — André Platzer, Springer, 2018 (LFCPS) | Preparing; coordinator and dates TBD | [Book overview and chapters](books/LFCPS/README.md) · [Reading plan](books/LFCPS/schedule.md) |
+| *Logical Foundations of Cyber-Physical Systems* — André Platzer，Springer，2018（LFCPS） | 准备中；负责人及日期待确认 | [教材档案与章节导航](books/LFCPS/README.md) · [章节研读计划](books/LFCPS/schedule.md) |
 
-See [CATALOG.md](CATALOG.md) for bibliographic records and future books. “Preparing” does not mean that reading or seminars have already taken place.
+完整书目与后续教材见[教材目录](CATALOG.md)。“准备中”表示正在筹备，不代表已经完成阅读或开展研讨。
 
-## Reading Schedule
+## 研读安排
 
-[Overall schedule and responsibilities](SCHEDULE.md) · [LFCPS proposed sequence](books/LFCPS/schedule.md) · [Seminar records](sessions/README.md).
+[整体日程与任务分工](SCHEDULE.md) · [LFCPS建议研读顺序](books/LFCPS/schedule.md) · [研讨记录](sessions/README.md)
 
-No seminar date or presenter has been confirmed. The overall schedule is the authoritative calendar; book plans track chapter progress.
+目前尚未确认研讨日期和汇报人。整体日程统一维护时间安排，各教材计划维护章节任务与进度。
 
-## Learning Materials
+## 学习材料
 
-| Material | LFCPS archive | Reusable template |
+| 材料类别 | LFCPS材料入口 | 可复用模板 |
 | --- | --- | --- |
-| Original reading notes | [Notes](books/LFCPS/notes/README.md) | [Notes template](templates/notes.md) |
-| Editable presentations and PDF exports | [Slides](books/LFCPS/slides/README.md) | [Presentation checklist](templates/presentation.md) |
-| Code, models and verification instructions | [Demos](books/LFCPS/demos/README.md) | [Demo README](templates/demo.md) |
-| Original exercise solutions | [Exercises](books/LFCPS/exercises/README.md) | Use the [notes template](templates/notes.md) with exercise references |
-| Discussion and follow-up records | [Sessions](sessions/README.md) | [Session template](templates/session.md) |
+| 原创阅读笔记 | [笔记索引](books/LFCPS/notes/README.md) | [阅读笔记模板](templates/notes.md) |
+| 可编辑PPT及PDF展示版 | [汇报材料](books/LFCPS/slides/README.md) | [汇报提纲与检查清单](templates/presentation.md) |
+| 代码、模型和验证说明 | [实验与演示](books/LFCPS/demos/README.md) | [Demo说明模板](templates/demo.md) |
+| 原创习题解答 | [习题索引](books/LFCPS/exercises/README.md) | 使用[笔记模板](templates/notes.md)，补充题号与解答过程 |
+| 讨论结论和后续任务 | [研讨记录](sessions/README.md) | [研讨记录模板](templates/session.md) |
 
-## Seminar Workflow
+## 研讨流程
 
-1. Propose a chapter/task through an Issue and agree on the presenter, reviewer and scope.
-2. Prepare notes, editable slides and an applicable Demo on a working branch.
-3. Open a Pull Request before the seminar; check sources, assumptions and reproducibility.
-4. Discuss and demonstrate; record what was actually observed and what remains unresolved.
-5. Revise materials and link them from a dated session record after the meeting.
+1. 通过任务单（Issue）提出章节任务，确认范围、汇报人和审阅人。
+2. 在工作分支准备笔记、可编辑PPT，以及适用的实验或演示（Demo）。
+3. 研讨前发起合并请求（Pull Request，PR），检查来源、假设和可复现性。
+4. 开展讨论和技术演示，记录实际观察、讨论结论与未解决问题。
+5. 会后修订材料，在真实日期的研讨记录中添加材料链接与后续任务。
 
-Recommended milestones: **T−7** scope and roles → **T−3** draft materials → **T−1** review → **T** seminar → **T+2** final materials and record. Adjust these intervals by agreement; see [CONTRIBUTING.md](CONTRIBUTING.md).
+建议节奏：**T−7天**确认任务 → **T−3天**提交初稿 → **T−1天**检查材料 → **T日**正式研讨 → **T+2天**整理材料和记录。时间可共同调整，具体要求见[协作规范](CONTRIBUTING.md)。
 
-## How to Contribute
+## 如何参与
 
-Start with the [contribution guide](CONTRIBUTING.md), then use the [Issue templates](https://github.com/CPS-HCPS-Research/Book-Reading-Seminar/issues/new/choose) and a Pull Request targeting `main`. A first submission may be a clearly scoped draft; disclose unrun or incomplete Demos.
+先阅读[协作规范](CONTRIBUTING.md)，使用[任务与问题模板](https://github.com/CPS-HCPS-Research/Book-Reading-Seminar/issues/new/choose)明确范围，再通过目标为 `main` 的PR提交材料。首次提交可以是范围明确的草稿，须说明未完成内容和Demo的实际验证状态。
 
-**中文参与指引：** 先查看整体安排与教材计划，认领章节后创建分支。笔记、PPT、Demo和习题分别放入教材目录；保留PPT可编辑源文件，建议附同名PDF。通过PR提交并说明验证状态、引用来源和待讨论问题。研讨结束后再新增真实日期的记录；负责人和时间未确认时写“待指定／待定”。
+**首次参与：** 查看安排、认领章节、创建分支，再按材料类别归档。PPT保留可编辑源文件，建议附同名PDF。负责人和时间未确认时写“待指定／待定”；研讨结束后再新增真实日期的记录。
 
-完整操作步骤见[中文使用说明](docs/user-guide.md)，包括首次提交PPT和Demo、PR协作、会后记录及新增教材。正文可以使用中文，文件和文件夹名使用英文。
+完整操作步骤见[使用说明](docs/user-guide.md)，包括首次提交PPT和Demo、PR协作、会后记录及新增教材。正文以中文为主，文件和文件夹名使用英文；教材原名、专业术语及必要的技术标识可保留英文。
 
-Run the lightweight checks from the repository root (Python 3.9+):
+在仓库根目录运行检查，需要Python 3.9或更高版本：
 
 ```sh
 python3 scripts/check_repository.py
 python3 -m unittest discover -s scripts/tests -v
 ```
 
-## Useful Resources
+## 常用资源
 
-- [Verified LFCPS official resources](books/LFCPS/resources.md): publisher, author, chapter directory, course, videos, slides and KeYmaera X.
-- [Add another book](CONTRIBUTING.md#adding-a-book) using the [book template](templates/book.md).
-- [Repository administration](docs/maintenance.md): branch protection, checks and maintenance.
+- [LFCPS官方资源](books/LFCPS/resources.md)：出版社、作者主页、正式目录、课程、视频、课件索引和KeYmaera X。
+- [新增教材流程](CONTRIBUTING.md#新增教材)：使用[教材档案模板](templates/book.md)建立独立档案。
+- [仓库维护说明](docs/maintenance.md)：分支保护、质量检查、维护及发布恢复。
 
-No repository-wide license has been selected. Original text, code and third-party material have separate rights; public visibility is not permission to redistribute them.
+仓库尚未设定统一许可证。原创文字、代码和第三方材料分别记录授权情况；公开可见不代表可以自由再分发。

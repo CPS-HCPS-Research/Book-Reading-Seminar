@@ -1,7 +1,7 @@
 ---
 name: 学习问题与勘误反馈
 about: 提出可定位的概念、推导、材料或Demo问题
-title: '[Question] '
+title: '[问题与勘误] '
 ---
 
 ## 定位
